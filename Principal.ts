@@ -1,6 +1,6 @@
 import Cl_persona from "./Cl_persona";
 
-// Datos de ejemplo según tu imagen
+// Datos de ejemplo 
 let p1 = new Cl_persona("Ana", 15);
 let p2 = new Cl_persona("Pedro", 14);
 let p3 = new Cl_persona("Juan", 19);
