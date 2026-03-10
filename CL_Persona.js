@@ -1,10 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-class Cl_persona {
-    _nombre;
-    _edadPersona;
-    acEdadPersona;
-    cntPersona;
+export default class Cl_Persona {
     constructor(n = "", eP = 0) {
         this._nombre = n;
         this._edadPersona = eP;
@@ -35,5 +29,3 @@ class Cl_persona {
         return this.acEdadPersona / this.cntPersona;
     }
 }
-exports.default = Cl_persona;
-//# sourceMappingURL=CL_Persona.js.map
