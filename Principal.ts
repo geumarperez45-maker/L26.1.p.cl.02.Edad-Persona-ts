@@ -1,4 +1,4 @@
-import Cl_persona from "./Cl_persona";
+import Cl_persona from "./Cl_Persona.js";
 
 // Datos de ejemplo 
 let p1 = new Cl_persona("Ana", 15);
@@ -8,19 +8,31 @@ let p4 = new Cl_persona("Paola", 20);
 let p5 = new Cl_persona("Sara", 16);
 let p6 = new Cl_persona("Luis", 18);
 
-// Objeto que llevará el control de la estadística
-let personaControl = new Cl_persona();
+// Variables para llevar el control (La "Estadística")
+let acEdad = 0;
+let cntPersona = 0;
 
-personaControl.procesarPersona(p1);
-personaControl.procesarPersona(p2);
-personaControl.procesarPersona(p3);
-personaControl.procesarPersona(p4);
-personaControl.procesarPersona(p5);
-personaControl.procesarPersona(p6);
+// El MÉTODO para procesar (como pidió la profe)
+let procesarPersona = (p: Cl_persona) => {
+    acEdad += p.edadPersona;
+    cntPersona++;
+};
+
+// Procesamos cada objeto
+procesarPersona(p1);
+procesarPersona(p2);
+procesarPersona(p3);
+procesarPersona(p4);
+procesarPersona(p5);
+procesarPersona(p6);
+
+// El MÉTODO para el promedio
+let calcularPromedio = () => {
+    if (cntPersona > 0) return acEdad / cntPersona;
+    else return 0;
+};
 
 let salida = document.getElementById("salida");
 if (salida) {
-  salida.innerHTML = `
-    <br> Edad promedio: ${personaControl.edadPromedio().toFixed(0)}
-  `;
+ salida.innerHTML += <br> Edad promedio: ${calcularPromedio().toFixed(2)};
 }

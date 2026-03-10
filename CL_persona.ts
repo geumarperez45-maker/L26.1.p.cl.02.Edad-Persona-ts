@@ -1,4 +1,4 @@
-export default class Cl_persona {
+export default class Cl_Persona {
   private _nombre: string;
   private _edadPersona: number;
   private acEdadPersona: number;
@@ -27,7 +27,7 @@ export default class Cl_persona {
     return this._edadPersona;
   }
 
-  procesarPersona(ps: Cl_persona) {
+  procesarPersona(ps: Cl_Persona) {
     // Acumular la edad del objeto que entra
     this.acEdadPersona += ps.edadPersona;
     // Contar la persona
@@ -38,5 +38,4 @@ export default class Cl_persona {
     if (this.cntPersona === 0) return 0;
     return this.acEdadPersona / this.cntPersona;
   }
-}
 }
